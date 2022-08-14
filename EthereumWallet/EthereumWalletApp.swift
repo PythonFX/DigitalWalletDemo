@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct EthereumWalletApp: App {
+    var network = Network()
+    var user = User()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(network)
+                .environmentObject(user)
         }
     }
 }
